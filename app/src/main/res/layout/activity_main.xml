@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:background="@mipmap/stepbackground"
+    tools:context="com.bdfoodcalorie.bdfoodcalorie.MainActivity">
+
+    <RelativeLayout
+        android:padding="5dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        // food select box
+        <RelativeLayout
+
+            android:background="#47dc51"
+            android:layout_width="175dp"
+            android:layout_height="80dp"
+            android:id="@+id/relativeLayout">
+
+            /// Choose item text
+            <TextView
+                android:id="@+id/textViewtemp1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/foodSearchButton"
+                android:layout_marginStart="8dp"
+                android:text="Choose food "
+                android:textStyle="bold" />
+
+            //Search button box
+            <Button
+                android:id="@+id/foodSearchButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="19dp"
+                android:layout_marginTop="12dp"
+                android:drawableTop="@mipmap/search" />
+
+            /// item spinner
+            <Spinner
+                android:id="@+id/foodListSpinner"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/textViewtemp1"
+                android:layout_below="@+id/textViewtemp1">
+
+            </Spinner>
+
+        </RelativeLayout>
+
+
+        /// weight set box
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginTop="22dp"
+            android:background="#47dc51"
+            android:id="@+id/relativeLayout2">
+
+            // choose weight text
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/button"
+                android:layout_marginStart="8dp"
+                android:text="Choose Quantity(g) "
+                android:textStyle="bold" />
+
+            // weight icon
+            <Button
+                android:id="@+id/button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/textView"
+                android:drawableTop="@mipmap/weighticon" />
+
+            /// weight spinner
+            <Spinner
+                android:id="@+id/weightListSpinner"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView">
+
+            </Spinner>
+
+        </RelativeLayout>
+
+
+        /// Result Calorie box
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="230dp"
+            android:layout_alignBaseline="@+id/relativeLayout"
+            android:layout_alignBottom="@+id/relativeLayout"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/relativeLayout"
+            android:background="#3871ec"
+            android:id="@+id/relativeLayout4">
+
+            /// meal info text
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:gravity="center"
+                android:text="Meal info"
+                android:textStyle="italic" />
+
+            /// Calorie text
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="Calories: "
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            /// Total Calorie result show
+
+            <TextView
+                android:id="@+id/totalCalorieResult"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            /// Other info text
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/totalCalorieResult"
+                android:layout_marginTop="20dp"
+                android:text="  Other info"
+                android:textStyle="italic" />
+
+            /// Fat text
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView4"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="19dp"
+                android:text="Fats         : "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            /// fat result show
+
+            <TextView
+                android:id="@+id/fatResult"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView5"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_toEndOf="@+id/textView5"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            /// Protein text
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView5"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="10dp"
+                android:text="Proteins  :"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            /// Protein Result text
+
+            <TextView
+                android:id="@+id/proteinsResult"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView6"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_toEndOf="@+id/textView5"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        /// Add Button
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="10dp"
+            android:text="ADD"
+            android:drawableLeft="@mipmap/add"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+
+        /// Clear Button
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/addButton"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/addButton"
+            android:drawableTop="@mipmap/clear" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/addButton"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/itemNameIdColumn"
+                android:background="#7c7e05"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:text="Name"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemWeightIdColumn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/itemNameIdColumn"
+                android:background="#7c7e05"
+                android:gravity="center_vertical"
+                android:text="Quantity"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/itemCalIdColumn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/itemWeightIdColumn"
+                android:background="#7c7e05"
+                android:gravity="center_vertical"
+                android:text="Calorie"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/list_itemId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/itemNameIdColumn"
+                android:divider="#ff2f2f"
+                android:dividerHeight="5dp"></ListView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    /// Navigation Menu
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        android:id="@+id/navigationBarId"
+        android:fitsSystemWindows="true"
+        >
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

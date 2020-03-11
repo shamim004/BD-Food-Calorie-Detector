@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_name">
+        <item>Walnut</item>
+        <item>Rice</item>
+        <item>Spinach</item>
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Peanut Butter</item>
+        <item>Avocado</item>
+        <item>Lentils</item>
+        <item>Beans</item>
+        <item>Orange</item>
+        <item>Broccoli</item>
+        <item>Sweet Potato</item>
+        <item>Cucumber</item>
+        <item>Mushrooms</item>
+        <item>Almonds</item>
+        <item>Biryani</item>
+        <item>Meat</item>
+        <item>Chicken</item>
+        <item>Jack Fruit</item>
+
+    </string-array>
+</resources>

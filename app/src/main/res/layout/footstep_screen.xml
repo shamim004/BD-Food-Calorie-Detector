@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:background="@mipmap/stepbackground"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/calLossTemp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tv_calorieLoss"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Calorie Loss"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_calorieLoss"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/calLossTemp1"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#c61c14"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/footStepTemp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/calLossTemp1"
+            android:layout_alignBottom="@+id/calLossTemp1"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/calLossTemp1"
+            android:text="Foot Step"
+            android:textColor="#000"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_steps"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_calorieLoss"
+            android:layout_alignBottom="@+id/tv_calorieLoss"
+            android:layout_marginStart="31dp"
+            android:layout_toEndOf="@+id/calLossTemp1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#c61c14"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/distanceTemp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/footStepTemp1"
+            android:layout_marginEnd="45dp"
+            android:layout_marginTop="3dp"
+            android:text="Distance"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/tv_distance"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:textColor="#c61c14"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+
+        android:id="@+id/waveloadingId"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:wlv_borderColor="@color/colorAccent"
+        app:wlv_borderWidth="3dp"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_titleBottomColor="#f9f7f7"
+
+        app:wlv_titleBottomSize="14sp"
+        app:wlv_titleBottomStrokeColor="@color/colorPrimary"
+        app:wlv_titleBottomStrokeWidth="3dp"
+        app:wlv_titleCenterColor="#f9f7f7"
+
+        app:wlv_titleCenterSize="14sp"
+        app:wlv_titleCenterStrokeColor="@color/colorPrimary"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_titleTopColor="#f9f7f7"
+
+        app:wlv_titleTopSize="14sp"
+        app:wlv_titleTopStrokeColor="@color/colorPrimary"
+        app:wlv_titleTopStrokeWidth="3dp"
+        app:wlv_triangle_direction="north"
+
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="@color/colorAccent"
+
+
+        />
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        />
+
+    <Button
+        android:id="@+id/btn_backHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        />
+
+
+
+</LinearLayout>
